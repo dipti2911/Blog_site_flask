@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="img.js"></script>
+    <link rel="stylesheet" href="img1.css">
+    <title>Title</title>
+</head>
+
+<body style="background-image: linear-gradient(to top, #feada6 0%, #f5efef 100% );
+ background-size: cover;
+
+    background-position: center;
+    height: 100%;
+    width: 100%;">
+<div class="form-group" >
+        <div class="container"style="margin-left:400px; margin-top: 50px; ">
+
+        <div class="row" >
+        <div class="col-md-6 offset-md-6 text-center bg-success">
+            <h3 style="text-align: center;">Write Blog</h3>
+
+
+
+
+<form action="write_blog" class="form-horizontal" method="POST">
+
+
+
+         <label>Title</label>
+     <input type="text"class="form-control" name="title" placeholder="Title"><br><br>
+
+
+             <label>Posted By</label>
+     <input type="text"class="form-control" name="pname" placeholder="Posted By"><br><br>
+
+
+
+
+    <label>Description</label>
+    <input type="text"class="form-control" name="desc" placeholder="Description"><br><br>
+
+
+
+
+  <!--<input type="file" name="photo"><br><br>-->
+
+
+
+
+
+
+
+<form action="file_upload" method="post" enctype="multipart/form-data">
+    <p>
+  <input type="file" name="file" class="form-control" autocomplete="off" required><br><br>
+    </p>
+    <div id="display_image"></div>
+
+        <button type="submit" class="btn btn-success" style="margin-top:10px; margin-bottom:10px;">submit</button>
+
+</form>
+</form>
+        </div>
+        </div>
+        </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="background-image: linear-gradient(to top, #feada6 0%, #f5efef 100% );
+ background-size: cover;
+
+    background-position: center;
+    height: 100%;
+    width: 100%;">
+<h2 style="margin-left:450px; margin-top:100px;">View Blog for any updation</h2>
+<table border="2px;" style="text-align:center; margin-left:400px;">
+    <tr>
+        <th>Blog_id</th>
+        <th>Title</th>
+        <th>Person name</th>
+        <th>Description</th>
+
+        <th>Delete</th>
+        <th>Edit</th>
+
+    </tr>
+
+    {% for i in data %}
+    <tr>
+        <td>{{i[0]}}</td>
+        <td>{{i[1]}}</td>
+        <td>{{i[2]}}</td>
+        <td>{{i[3]}}</td>
+
+
+        <td>
+            <a href="delete/{{i[0]}}">Delete</a>
+
+
+        </td>
+        <td>
+            <a href="edit_blog/{{i[0]}}">Edit</a>
+        </td>
+
+    </tr>
+
+
+    {% endfor %}
+</table>
+
+
+</body>
+</html>
+

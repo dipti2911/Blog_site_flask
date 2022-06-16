@@ -1,0 +1,97 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Blog_id</th>
+        <th>Title</th>
+        <th>Person name</th>
+        <th>Description</th>
+
+    </tr>
+    {% if blogs %}
+    {% for i in blogs %}
+    <tr>
+        <td>{{i[0]}}</td>
+        <td>{{i[1]}}</td>
+        <td>{{i[2]}}</td>
+        <td>{{i[3]}}</td>
+        <td>
+            <h3><a href="/blogs/{{i[blog_id]}}">{{i['title']}}</a></h3>
+            <h5>Written by {{i['pname']}}</h5>
+            <a href="delete/{{i[0]}}">Delete</a>
+            <a href="edit/{{i[0]}}">Edit</a>
+        </td>
+    </tr>
+    {% endfor %}
+    {% else %}
+    <h3>No blogs have been written</h3>
+    {% endif %}
+</table>
+
+</body>
+</html>-->
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body style="background-image: linear-gradient(to top, #feada6 0%, #f5efef 100% );">
+
+<nav class="navbar navbar-inverse" style="background-color:#001f4d;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+
+            <button type="button" data-toggle="collapse" class="navbar-toggle"
+            data-target="#mydiv">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+
+        </button>
+        </div>
+
+ <div id="mydiv" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <a class="navbar-brand" href="#">Blog</a>
+
+
+              <li><a href="#"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+        <li><a href="/about"><span class="glyphicon glyphicon-user"></span> About</a></li>
+
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+
+      <li><a href="/logout"><span class="glyphicon glyphicon-user"></span>Logout</a></li>
+
+
+
+    </ul>
+  </div>
+  </div>
+</nav>
+<form action="base">
+<div style="text-align:center;">
+  <button type="button" class="btn btn-info" ><a href="/View_blog" style="color: wheat;">View Blog</a></button>
+  <button type="button" class="btn btn-danger"><a href="/write_blog" style="color:wheat;">Post Blog</a></button>
+</div>
+</form>
+
+  </div>
+
+</div>
+
+
+</body>
+</html>
+
+
